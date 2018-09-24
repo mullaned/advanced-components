@@ -6,7 +6,10 @@
                 <button @click="selectedComponent = 'appAuthor'">Author</button>
                 <button @click="selectedComponent = 'appNew'">New</button>
                 <hr>
-                <component :is="selectedComponent"></component>
+                <keep-alive>
+                    <component :is="selectedComponent"></component>
+                </keep-alive>
+                
                 <!-- <app-quote>
                     <h2 slot="title">The Quote</h2>
                     <p slot="content">A wonderful Quote</p>
